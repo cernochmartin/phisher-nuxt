@@ -33,30 +33,33 @@ async function register() {
 </script>
 
 <template>
-  <h2>Create an account!</h2>
-  <form>
-    <div>
-      <label for="first-name">First Name</label>
-      <input type="text" id="first-name" v-model="credentials.firstName" />
-    </div>
-    <div>
-      <label for="surname">Surname</label>
-      <input type="text" id="surname" v-model="credentials.surname" />
-    </div>
-    <div>
-      <label for="email">Email</label>
-      <input type="email" id="email" v-model="credentials.email" />
-    </div>
-    <div>
-      <label for="password">Password</label>
-      <input type="password" id="password" v-model="credentials.password" />
-    </div>
-    <div>
-      <label for="password">Repeat Password</label>
-      <input type="password" id="repeat-password" v-model="credentials.passwordRepeat" />
-    </div>
-    <div>
-      <button type="submit">Submit</button>
-    </div>
-  </form>
+  <Nav />
+  <article>
+    <h2>Create an account!</h2>
+    <form>
+      <div>
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" v-model="credentials.firstName" />
+      </div>
+      <div>
+        <label for="surname">Surname</label>
+        <input type="text" id="surname" v-model="credentials.surname" />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" v-model="credentials.email" />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" v-model="credentials.password" />
+      </div>
+      <div>
+        <label for="password">Repeat Password</label>
+        <input type="password" id="repeat-password" v-model="credentials.passwordRepeat" />
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </article>
 </template>

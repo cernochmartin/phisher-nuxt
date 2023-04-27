@@ -3,4 +3,4 @@ export default defineNuxtConfig({
     '@nuxtjs/supabase',
     '@nuxtjs/tailwindcss'
 ],
-});
+})

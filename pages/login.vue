@@ -23,7 +23,8 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <article class="hello">
+  <Nav />
+  <article class="w-50 h-50 bg-pink-400">
     <h2>Log in to your account!</h2>
     <form>
       <div>
@@ -40,10 +41,3 @@ watchEffect(async () => {
     </form>
   </article>
 </template>
-<style>
-.hello {
-  width: 800px;
-  height: 500px;
-  background-color: aqua;
-}
-</style>
