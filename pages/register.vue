@@ -34,7 +34,7 @@ async function register() {
 
 <template>
   <Nav />
-  <article>
+  <article class="h-50 w-50 bg-pink-400 mx-auto">
     <h2>Create an account!</h2>
     <form>
       <div>

@@ -11,15 +11,9 @@ async function logOut() {
 </script>
 
 <template>
-  <nav>
-    <div>
-      <button v-if="user" @click="logOut()">Log Out</button>
-    </div>
-    <div>
-      <NuxtLink v-if="!user" to="/login">Login</NuxtLink>
-    </div>
-    <div>
-      <NuxtLink v-if="!user" to="/register">Register</NuxtLink>
-    </div>
+  <nav class="bg-white bg-opacity-95 h-16 shadow fixed w-full text-2xl flex items-center gap-12 pl-12 text-gray-900">
+    <button v-if="user" @click="logOut()">Log Out</button>
+    <NuxtLink v-if="!user" to="/login">Login</NuxtLink>
+    <NuxtLink v-if="!user" to="/register">Register</NuxtLink>
   </nav>
 </template>

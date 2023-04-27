@@ -1,11 +1,10 @@
 export default {
   tailwindcss: {
     cssPath: false,
-    configPath: 'tailwind.config',
-    exposeConfig: false,
-    exposeLevel: 2,
+    configPath: 'tailwind.config.js',
     config: {},
-    injectPosition: 'first',
-    viewer: true,
+  },
+  fontFamily: {
+    primary: ['Montserrat', 'sans-serif']
   }
 }
