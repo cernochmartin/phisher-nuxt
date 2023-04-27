@@ -9,9 +9,8 @@ async function logOut() {
   await router.push('/login')
 }
 </script>
-
 <template>
-  <nav class="bg-white bg-opacity-95 h-16 shadow fixed w-full text-2xl flex items-center gap-12 pl-12 text-gray-900">
+  <nav class="bg-white bg-opacity-90 h-16 shadow fixed w-full text-2xl flex items-center gap-12 pl-12 text-gray-800">
     <button v-if="user" @click="logOut()">Log Out</button>
     <NuxtLink v-if="!user" to="/login">Login</NuxtLink>
     <NuxtLink v-if="!user" to="/register">Register</NuxtLink>

@@ -21,26 +21,26 @@ watchEffect(async () => {
   }
 })
 </script>
-
 <template>
   <div class="login">
     <Nav />
     <article class="flex justify-center items-center h-full">
-      <div class="h-600px w-480px bg-white bg-opacity-95 rounded p-8 text-gray-900 border border-gray-900">
+      <div class="bg-white bg-opacity-90 rounded p-8 text-gray-800 border border-gray-800">
         <h2 class="text-4xl">Log in to your account</h2>
-        <form class="flex flex-col gap-10 text-xl pt-8">
+        <hr class="h-0.5 w-full bg-gray-800 mt-4">
+        <form class="flex flex-col gap-8 text-xl pt-8">
           <div class="flex flex-col gap-3">
             <label for="email">E-mail: </label>
-            <input type="email" id="email" v-model="credentials.email" placeholder="user@domain.com"
-              class="bg-gray-900 text-white rounded p-2" />
+            <input type="email" id="email" v-model="credentials.email"
+              class="bg-gray-800 text-white rounded p-2 text-lg" />
           </div>
           <div class="flex flex-col gap-3">
             <label for="password">Password: </label>
             <input type="password" id="password" v-model="credentials.password"
-              class="bg-gray-900 text-white rounded p-2" />
+              class="bg-gray-800 text-white rounded p-2" />
           </div>
           <div class="flex justify-center">
-            <button type="submit" class="p-2 w-24 bg-gray-900 rounded text-white text-opacity-95">Submit</button>
+            <button type="submit" class="p-2 w-24 bg-gray-800 rounded text-white text-xl">Submit</button>
           </div>
         </form>
       </div>

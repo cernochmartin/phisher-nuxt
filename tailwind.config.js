@@ -4,7 +4,4 @@ export default {
     configPath: 'tailwind.config.js',
     config: {},
   },
-  fontFamily: {
-    primary: ['Montserrat', 'sans-serif']
-  }
 }
