@@ -1,29 +1,33 @@
 <script setup>
-const credentials = reactive({
-  email: '',
-  password: '',
-})
+// const credentials = reactive({
+//   email: '',
+//   password: '',
+// })
 
-const client = useSupabaseAuthClient()
-const router = useRouter()
-const user = useSupabaseUser()
+// const client = useSupabaseAuthClient()
+// const router = useRouter()
+// const user = useSupabaseUser()
 
-async function login() {
-  const { email, password } = credentials;
-  const { error } = await client.auth.signInWithPassword({ email, password })
-  if (!error) return router.push('/')
-  console.log(error)
-}
+// async function login() {
+//   const { email, password } = credentials;
+//   const { error } = await client.auth.signInWithPassword({ email, password })
+//   if (!error) return router.push('/')
+//   console.log(error)
+// }
 
-watchEffect(async () => {
-  if (user.value) {
-    await router.push('/')
-  }
+// watchEffect(async () => {
+//   if (user.value) {
+//     await router.push('/')
+//   }
+// })
+
+definePageMeta({
+  layout: 'sign'
 })
 </script>
 <template>
   <div class="login">
-    <Nav />
+    <SignNavBar />
     <article class="flex justify-center items-center h-full">
       <div class="bg-white bg-opacity-90 rounded p-8 text-gray-800 border border-gray-800">
         <h2 class="text-4xl">Log in to your account</h2>

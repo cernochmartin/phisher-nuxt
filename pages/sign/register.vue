@@ -1,39 +1,43 @@
 <script setup>
-const credentials = reactive({
-  firstName: '',
-  surname: '',
-  email: '',
-  password: '',
-  passwordRepeat: '',
+// const credentials = reactive({
+//   firstName: '',
+//   surname: '',
+//   email: '',
+//   password: '',
+//   passwordRepeat: '',
+// })
+
+// const client = useSupabaseAuthClient();
+
+// async function register() {
+//   const { firstName, surname, email, password, passwordRepeat } = credentials;
+//   if (password !== passwordRepeat) return;
+//   const { error } = await client.auth.signUp({
+//     email,
+//     password,
+//     options: {
+//       data: {
+//         first_name: firstName,
+//         surname,
+//         email,
+//       },
+//       emailRedirectTo: 'http://localhost:3000/login',
+//     },
+//   });
+//   if (error) {
+//     alert('Something went wrong !')
+//     return
+//   }
+//   alert('Open the email we sent you to verify your account!')
+// }
+
+definePageMeta({
+  layout: 'sign'
 })
-
-const client = useSupabaseAuthClient();
-
-async function register() {
-  const { firstName, surname, email, password, passwordRepeat } = credentials;
-  if (password !== passwordRepeat) return;
-  const { error } = await client.auth.signUp({
-    email,
-    password,
-    options: {
-      data: {
-        first_name: firstName,
-        surname,
-        email,
-      },
-      emailRedirectTo: 'http://localhost:3000/login',
-    },
-  });
-  if (error) {
-    alert('Something went wrong !')
-    return
-  }
-  alert('Open the email we sent you to verify your account!')
-}
 </script>
 <template>
   <div class="login">
-    <Nav />
+    <SignNavBar />
     <article class="flex justify-center items-center h-full">
       <div class="bg-white bg-opacity-90 rounded p-8 text-gray-800 border border-gray-800">
         <h2 class="text-4xl">Create your account</h2>
