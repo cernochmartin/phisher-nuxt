@@ -1,10 +1,10 @@
 <template>
   <nav class="!bg-gray-200 p-6 grid grid-cols-2 w-56 h-screen">
     <ul class="flex flex-col gap-1 items-center">
-      <li> <i class="fa-solid fa-house pt-0.5" /></li>
-      <li> <i class="fa-solid fa-user pt-0.5" /></li>
-      <li> <i class="fa-solid fa-credit-card pt-0.5" /></li>
-      <li> <i class="fa-solid fa-gears pt-0.5" /></li>
+      <li><i class="fa-solid fa-house pt-0.5" /></li>
+      <li><i class="fa-solid fa-user pt-0.5" /></li>
+      <li><i class="fa-solid fa-credit-card pt-0.5" /></li>
+      <li><i class="fa-solid fa-gears pt-0.5" /></li>
     </ul>
     <ul class="flex flex-col gap-1">
       <li>

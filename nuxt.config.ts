@@ -7,8 +7,12 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/supabase', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
   app: {
     head: {
-      title: 'Phisher | Admin center',
-      meta: [],
+      title: 'Phisher | Admin portal',
+      meta: [
+        { name: 'description', content: 'Phisher admin portal.' }
+      ],
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
       script: [
         { src: 'https://kit.fontawesome.com/f6333c832d.js', defer: true, crossorigin:'anonymous' }
       ]

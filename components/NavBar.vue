@@ -4,5 +4,6 @@
     <NuxtLink to="/">
       <h1 class="text-xl">Phisher</h1>
     </NuxtLink>
+    <SearchBar />
   </nav>
 </template>
