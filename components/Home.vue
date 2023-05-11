@@ -1,32 +1,22 @@
 <script setup lang="ts">
 
-import { cards } from './home/cards'
+import { cards } from './cards'
 
 // definePageMeta({
 //   middleware: 'auth',
 // })
 
-const colorMode = useColorMode()
-
-definePageMeta({
-  colorMode: 'light',
-})
 </script>
 <template>
-  <h2>Phisher</h2>
-  <h3>color mode: {{ $colorMode.value }}</h3>
-  <i class="fa-solid fa-sun fa-xl cursor-pointer" @click="$colorMode.preference = 'light'"></i>
-  <i class="fa-solid fa-moon fa-xl cursor-pointer" @click="$colorMode.preference = 'dark'"></i>
-  <div></div>
-  <Card />
+  <div class="background">
+    <div class="grid grid-cols-3 gap-10 pt-28">
+      <Card v-for="item in cards" :key="item.heading" v-bind="item" />
+    </div>
+  </div>
 </template>
 <style scoped>
-* {
-  background-color: white;
-}
-
-.dark-mode * {
-  background-color: rgb(63, 59, 59);
-  /* color: white; */
+.background {
+  background-image: url('../assets/icon/icon_home.svg');
+  background-repeat: no-repeat;
 }
 </style>
