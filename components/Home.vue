@@ -8,15 +8,8 @@ import { cards } from './cards'
 
 </script>
 <template>
-  <div class="background">
-    <div class="grid grid-cols-3 gap-10 pt-28">
-      <Card v-for="item in cards" :key="item.heading" v-bind="item" />
-    </div>
+  <h2 class="text-4xl">Home</h2>
+  <div class="grid grid-cols-3 gap-10 pt-20">
+    <Card v-for="item in cards" :key="item.heading" v-bind="item" />
   </div>
 </template>
-<style scoped>
-.background {
-  background-image: url('../assets/icon/icon_home.svg');
-  background-repeat: no-repeat;
-}
-</style>

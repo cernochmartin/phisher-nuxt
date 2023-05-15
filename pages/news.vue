@@ -1,8 +1,8 @@
 <script setup>
 useHead({
-  title: 'Phisher | Admin Portal: Manage users'
+  title: "Phisher | Admin Portal: What's new"
 })
 </script>
 <template>
-  <User />
+  <News />
 </template>

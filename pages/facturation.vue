@@ -1,3 +1,8 @@
+<script setup>
+useHead({
+  title: 'Phisher | Admin Portal: Facturation'
+})
+</script>
 <template>
-  <h2>facturation</h2>
+  <Facturation />
 </template>

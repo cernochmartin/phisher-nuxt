@@ -3,7 +3,7 @@ export const cards = [
     heading: "What's new?",
     content: 'hello',
     link: {
-      path: 'bla',
+      path: '/news',
       linkName: "See what's new"
     },
   },

@@ -1,26 +1,28 @@
 <template>
-  <nav class="sidebar p-6 grid grid-cols-2 w-56 h-screen">
-    <ul class="flex flex-col gap-1 items-center">
-      <li><i class="fa-solid fa-house pt-0.5" /></li>
-      <li><i class="fa-solid fa-user pt-0.5" /></li>
-      <li><i class="fa-solid fa-credit-card pt-0.5" /></li>
-      <li><i class="fa-solid fa-gears pt-0.5" /></li>
-    </ul>
-    <ul class="flex flex-col gap-1">
-      <li>
+  <nav class="sidebar p-6 w-56 h-screen">
+    <ul class="grid grid-cols-1 gap-1">
+      <li class="flex gap-3">
+        <i class="fa-solid fa-house pt-0.5 w-6" />
         <NuxtLink to="/">Home</NuxtLink>
       </li>
-      <li>
+      <li class="flex gap-3">
+        <i class="fa-solid fa-newspaper pt-0.5 w-6" />
+        <NuxtLink to="news">News</NuxtLink>
+      </li>
+      <li class="flex gap-3">
+        <i class="fa-solid fa-user pt-0.5 w-6" />
         <NuxtLink to="users">Users</NuxtLink>
       </li>
-      <li>
+      <li class="flex gap-3">
+        <i class="fa-solid fa-credit-card pt-0.5 w-6" />
         <NuxtLink to="facturation">Facturation</NuxtLink>
       </li>
-      <li>
+      <li class="flex gap-3">
+        <i class="fa-solid fa-gears pt-0.5 w-6" />
         <NuxtLink to="settings">Settings</NuxtLink>
       </li>
     </ul>
-    <hr class="bg-gray-200 h-0.5 w-full">
+    <hr class="bg-gray-600 h-0.5 w-full mt-6">
   </nav>
 </template>
 <style scoped>

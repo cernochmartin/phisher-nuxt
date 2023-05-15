@@ -1,3 +1,8 @@
+<script setup>
+useHead({
+  title: 'Phisher | Admin Portal: Settings'
+})
+</script>
 <template>
-  <h2>settings</h2>
+  <Settings />
 </template>

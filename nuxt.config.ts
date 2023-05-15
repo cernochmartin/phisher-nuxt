@@ -7,7 +7,6 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/supabase', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
   app: {
     head: {
-      title: 'Phisher | Admin portal',
       meta: [
         { name: 'description', content: 'Phisher admin portal.' }
       ],
