@@ -7,7 +7,7 @@
       </li>
       <li class="flex gap-3">
         <i class="fa-solid fa-newspaper pt-0.5 w-6" />
-        <NuxtLink to="news">News</NuxtLink>
+        <NuxtLink to="news">What's new</NuxtLink>
       </li>
       <li class="flex gap-3">
         <i class="fa-solid fa-user pt-0.5 w-6" />
@@ -16,6 +16,10 @@
       <li class="flex gap-3">
         <i class="fa-solid fa-credit-card pt-0.5 w-6" />
         <NuxtLink to="facturation">Facturation</NuxtLink>
+      </li>
+      <li class="flex gap-3">
+        <i class="fa-solid fa-handshake-angle pt-0.5 w-6" />
+        <NuxtLink to="assistant">Assistant</NuxtLink>
       </li>
       <li class="flex gap-3">
         <i class="fa-solid fa-gears pt-0.5 w-6" />

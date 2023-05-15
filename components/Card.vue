@@ -17,14 +17,18 @@ defineProps<{
     </div>
     <hr class="bg-gray-600 w-full h-0.5">
     <div class="p-3">
-      <p class="text-base">
-        {{ content }}
-      </p>
-      <NuxtLink :to="link?.path"
-        class="bg-blue-500 w-32 h-10 block text-white text-xs font-semibold flex items-center justify-center cursor-pointer rounded-sm">
-        {{
-          link?.linkName }}
-      </NuxtLink>
+      <div class="h-16">
+        <p class="text-base">
+          {{ content }}
+        </p>
+      </div>
+      <div class="flex h-40 items-end">
+        <NuxtLink :to="link?.path"
+          class="bg-blue-500 w-32 h-10 block text-white text-xs font-semibold flex items-center justify-center cursor-pointer rounded-sm">
+          {{
+            link?.linkName }}
+        </NuxtLink>
+      </div>
     </div>
   </div>
 </template>

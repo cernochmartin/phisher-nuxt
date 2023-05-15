@@ -21,9 +21,11 @@ const showPopup = ref(false)
     <tr>
       <td>Martin Černoch</td>
       <td>
-        <div class="grid grid-cols-2">
-          <NuxtLink to="mailto:cernochm@outlook.cz" target="_blank">cernochm@outlook.cz</NuxtLink>
-          <i class="fa-solid fa-copy text-blue-500 cursor-pointer pt-0.5" />
+        <div class="flex gap-10">
+          <NuxtLink to="mailto:cernochm@outlook.cz" target="_blank" class="w-60">cernochm@outlook.cz</NuxtLink>
+          <button>
+            <i class="fa-solid fa-copy text-blue-500 pt-0.5" />
+          </button>
         </div>
       </td>
       <td>Chief Executive Officer</td>
@@ -39,9 +41,11 @@ const showPopup = ref(false)
     <tr>
       <td>Jakub Moučka</td>
       <td>
-        <div class="grid grid-cols-2">
-          <NuxtLink to="mailto:jakub.moucka6@gmail.com" target="_blank">jakub.moucka6@gmail.com</NuxtLink>
-          <i class="fa-solid fa-copy text-blue-500 cursor-pointer pt-0.5" />
+        <div class="flex gap-10">
+          <NuxtLink to="mailto:jakub.moucka6@gmail.com" target="_blank" class="w-60">jakub.moucka6@gmail.com</NuxtLink>
+          <button>
+            <i class="fa-solid fa-copy text-blue-500 pt-0.5" />
+          </button>
         </div>
       </td>
       <td>Test Subject</td>
@@ -55,7 +59,7 @@ const showPopup = ref(false)
       </td>
     </tr>
   </table>
-  <AddButton />
+  <AddButton @click="showPopup = true" />
   <PopupAddUser v-show="showPopup" @close-popup="showPopup = false" />
 </template>
 <style>

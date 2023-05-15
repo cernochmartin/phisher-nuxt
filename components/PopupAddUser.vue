@@ -1,7 +1,7 @@
 <template>
   <div class="background_overlay">
     <div class="add_user">
-      <div @click="$emit('close-popup')" class="cursor-pointer text-2xl">&#10006;
+      <div @click="$emit('close-popup')" class="cursor-pointer text-2xl w-full flex justify-end">&#10006;
       </div>
       <h3 class="text-3xl text-center pb-2">Add user</h3>
       <hr class="bg-gray-500 h-0.5 mb-8">
@@ -54,7 +54,7 @@
 
 input {
   border: 1px solid black;
-  border-radius: 2px;
+  border-radius: 4px;
   padding: 4px;
 }
 </style>
