@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import PopupAddUser from '../components/PopupAddUser.vue'
 
 const showPopup = ref(false)
 

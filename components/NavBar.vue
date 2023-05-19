@@ -1,8 +1,7 @@
 <template>
-  <nav class="w-full h-12 bg-blue-500 flex items-center gap-6 pl-8 text-white">
-    <i class="fa-solid fa-ellipsis-vertical fa-xl" />
+  <nav class="w-full h-12 bg-blue-500 flex items-center gap-6 pl-6 text-white">
     <NuxtLink to="/">
-      <h1 class="text-xl">Welcome to Phisher</h1>
+      <h1 class="text-xl">Phisher Administration Portal</h1>
     </NuxtLink>
     <SearchBar />
   </nav>
