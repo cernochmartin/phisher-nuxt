@@ -4,7 +4,7 @@ Phisher admin portal is a website for management of your Phisher software, you c
 
 ![Nuxtjs](https://img.shields.io/badge/Nuxt-002E3B?style=for-the-badge&logo=nuxtdotjs&logoColor=#00DC82)![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-## Setup 🛠️
+## Setup 🛠️ and install packages 📦
 
 Install all the dependencies:
 
@@ -19,7 +19,7 @@ pnpm install / pnpm i
 yarn install / yarn i
 ```
 
-## Development Server ⚙️
+## Development Server 🛠️
 
 Start the development server on `http://localhost:3000`:
 
