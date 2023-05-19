@@ -21,7 +21,7 @@ pnpm install / pnpm i
 yarn install / yarn i
 ```
 
-## ⚙️ Development Server 🛠
+## ⚙️ Development Server 
 
 Start the development server on `http://localhost:3000`:
 
