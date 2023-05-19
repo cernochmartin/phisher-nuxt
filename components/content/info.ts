@@ -1,4 +1,4 @@
-export const cards = [
+export const info = [
   {
     heading: "What's new?",
     content: "Look up on what's new about Phisher here on this page.",
