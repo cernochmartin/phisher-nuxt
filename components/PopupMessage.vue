@@ -6,12 +6,12 @@
       <h3 class="text-3xl text-center pb-2">Give us feedback</h3>
       <hr class="bg-gray-500 h-0.5 mb-8">
       <textarea placeholder="Write your feedback" class="w-full textarea"></textarea>
-      <div class="flex justify-center gap-24">
-        <div class="flex flex-col gap-2 pt-4">
+      <div class="flex justify-center gap-14">
+        <div class="flex flex-col gap-2 pt-4 w-full">
           <span>From:</span>
           <input type="text" class="w-full" placeholder="From">
         </div>
-        <div class="flex flex-col gap-2 pt-4">
+        <div class="flex flex-col gap-2 pt-4 w-full">
           <span>E-mail:</span>
           <input type="text" class="w-full" placeholder="E-mail">
         </div>

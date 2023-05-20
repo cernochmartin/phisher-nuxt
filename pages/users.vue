@@ -23,6 +23,6 @@ useHead({
     </tr>
     <UserTable v-for="item in info" :key="item.heading" v-bind="item" />
   </table>
-  <AddButton @click="showPopup = true" />
-  <PopupAddUser v-show="showPopup" @close-popup="showPopup = false" />
+  <AddUserButton @click="showPopup = true" />
+  <PopupAddUser v-show="showPopup" @close-popup-add="showPopup = false" />
 </template>
