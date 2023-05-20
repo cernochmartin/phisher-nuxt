@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       meta: [
-        { name: 'description', content: "Phisher administrator portal let's you manageme your Phisher software, see the latest features, add, delete or make changes for users, change a subscription plan or get help by our assistant." }
+        { name: 'description', content: "Phisher administrator portal let's you manage your Phisher software, see the latest features, add, delete or make changes for users, change a subscription plan or get help by our assistant." }
       ],
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',

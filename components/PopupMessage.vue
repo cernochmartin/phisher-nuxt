@@ -1,7 +1,8 @@
 <template>
   <div class="background_overlay">
     <div class="message">
-      <div @click="$emit('close-popup-message')" class="cursor-pointer text-2xl w-full flex justify-end">&#10006;
+      <div class="text-2xl w-full flex justify-end">
+        <button @click="$emit('close-popup-message')">&#10006;</button>
       </div>
       <h3 class="text-3xl text-center pb-2">Give us feedback</h3>
       <hr class="bg-gray-500 h-0.5 mb-8">

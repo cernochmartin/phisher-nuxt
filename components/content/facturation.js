@@ -1,7 +1,7 @@
 export const facturation = [
   {
     heading: 'Change billing plan',
-    content: "boobs"
+    content: "index"
   },
   {
     heading: 'Change subscription plan',

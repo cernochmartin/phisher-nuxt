@@ -1,6 +1,6 @@
 <script setup>
 
-import { info } from '../components/content/users'
+import { users } from '../components/content/users'
 
 const showPopup = ref(false)
 
@@ -21,8 +21,9 @@ useHead({
       <th>Role</th>
       <th>Delete user</th>
     </tr>
-    <UserTable v-for="item in info" :key="item.heading" v-bind="item" />
+    <UserTable v-for="item in users" :key="item.heading" v-bind="item" />
   </table>
   <AddUserButton @click="showPopup = true" />
   <PopupAddUser v-show="showPopup" @close-popup-add="showPopup = false" />
+  <PopupActionSuccess v-show="showPopupSuccess" @close-popup-success="showPopupSuccess = false" />
 </template>

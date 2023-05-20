@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-const showPopup = ref(false)
+const showPopupDelete = ref(false)
 
 defineProps<{
   firstName?: string
@@ -22,7 +22,7 @@ defineProps<{
     </td>
     <td>{{ role }}</td>
     <td>
-      <button @click="showPopup = true" type="submit" class="flex gap-2">
+      <button @click="showPopupDelete = true" type="submit" class="flex gap-2">
         <span>Delete</span>
         <div class="w-6 h-6 bg-red-500 rounded-full">
           <i class="fa-solid fa-user-minus fa-xs" style="color: #ffffff;" />
@@ -30,7 +30,7 @@ defineProps<{
       </button>
     </td>
   </tr>
-  <PopupDeleteUser v-show="showPopup" @close-popup-delete="showPopup = false" />
+  <PopupDeleteUser v-show="showPopupDelete" @close-popup-delete="showPopupDelete = false" />
 </template>
 <style>
 table,
