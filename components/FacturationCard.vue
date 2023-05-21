@@ -21,5 +21,6 @@ defineProps<{
   width: 720px;
   height: 720px;
   padding: 24px;
+  border-radius: 8px;
 }
 </style>

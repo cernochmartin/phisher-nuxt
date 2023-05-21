@@ -15,15 +15,16 @@ defineProps<{
       </div>
       <div class="w-full h-40 text-lg pt-2">
         <span class="text-xl flex justify-center">Are you sure you want to delete {{ firstName }} {{ surname }}?</span>
-        <div class="flex gap-20 justify-center h-36">
-          <button @click="showPopupSuccess = true" class="text-red-500"><i
+        <div class="flex gap-20 justify-center items-center h-full">
+          <button @click="showPopupSuccess = true" class="text-red-500 h-12"><i
               class="fa-solid fa-circle-xmark fa-xl w-12" />No</button>
-          <button @click="showPopupSuccess = true" class="text-green-500"><i
+          <button @click="showPopupSuccess = true" class="text-green-500 h-12"><i
               class="fa-solid fa-circle-check fa-xl w-12" />Yes</button>
         </div>
       </div>
     </div>
   </div>
+  <!-- <PopupActionSuccess v-show="showPopupSuccess" @close-popup-success="showPopupSuccess = false" /> -->
 </template>
 <style scoped>
 .background_overlay {

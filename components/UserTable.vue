@@ -13,9 +13,9 @@ defineProps<{
   <tr>
     <td>{{ firstName }} {{ surname }}</td>
     <td>
-      <div class="flex gap-10">
-        <NuxtLink :to="`mailto:${email}`" target="_blank" class="w-60">{{ email }}</NuxtLink>
-        <button>
+      <div class="flex gap-6">
+        <NuxtLink :to="`mailto:${email}`" target="_blank">{{ email }}</NuxtLink>
+        <button type="submit">
           <i class="fa-solid fa-copy text-blue-500 pt-0.5" />
         </button>
       </div>
@@ -33,11 +33,21 @@ defineProps<{
   <PopupDeleteUser v-show="showPopupDelete" @close-popup-delete="showPopupDelete = false" />
 </template>
 <style>
-table,
-td,
-th {
-  border: 1px solid black;
-  padding: 8px;
+tr:nth-child(4n + 1) {
+  background-color: #e2e2e2;
+}
+
+tr:nth-child(4n + 2) {
   background-color: #f2f2f2;
+}
+
+tr:nth-child(4n + 4) {
+  background-color: #e2e2e2;
+}
+
+table,
+th,
+td {
+  padding: 12px;
 }
 </style>

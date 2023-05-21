@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 
 import { users } from '../components/content/users'
 
@@ -13,17 +13,26 @@ useHead({
 })
 </script>
 <template>
-  <h2 class="text-4xl pb-20">Manage users</h2>
+  <div class="flex gap-6 items-center text-2xl pb-20">
+    <h2 class="text-4xl">Manage users</h2>
+    <span>></span>
+    <button @click="showPopup = true" type="submit" class="underline">
+      Add user
+    </button>
+    <!-- <span>></span>
+    <button @click="exportToCSV" type="submit" class="underline">
+      Export table to .csv file
+    </button> -->
+  </div>
   <table class="w-full">
-    <tr>
+    <tr class="text-lg">
       <th>Name</th>
       <th>E-mail</th>
       <th>Role</th>
       <th>Delete user</th>
     </tr>
-    <UserTable v-for="item in users" :key="item.heading" v-bind="item" />
+    <UserTable v-for="item in users" :key="item.email" v-bind="item" />
   </table>
   <AddUserButton @click="showPopup = true" />
   <PopupAddUser v-show="showPopup" @close-popup-add="showPopup = false" />
-  <PopupActionSuccess v-show="showPopupSuccess" @close-popup-success="showPopupSuccess = false" />
 </template>

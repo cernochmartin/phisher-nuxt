@@ -38,7 +38,7 @@ defineProps<{
   height: 300px;
   padding: 8px;
   background-color: #f2f2f2;
-  border-radius: 2px;
+  border-radius: 8px;
   opacity: 97%;
 }
 </style>
