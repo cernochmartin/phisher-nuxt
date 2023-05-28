@@ -1,9 +1,5 @@
 export default defineNuxtConfig({
   ssr: false,
-  // env: {
-  //   SUPABASE_KEY: process.env.SUPABASE_KEY,
-  //   SUPABASE_URL: process.env.SUPABASE_URL,
-  // },
   modules: ['@nuxtjs/supabase', '@nuxtjs/tailwindcss', '@nuxtjs/google-fonts'],
   googleFonts: {
     families: {
@@ -14,7 +10,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       meta: [
-        { name: 'description', content: "Phisher administrator portal let's you manage your Phisher software, see the latest features, add, delete or make changes for users, change a subscription plan or get help by our assistant." }
+        { name: 'description', content: "Phisher administrator portal let's you manage your Phisher software, see the latest features, add, delete or make changes for users or change a subscription plan." }
       ],
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',

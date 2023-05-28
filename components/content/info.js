@@ -24,14 +24,6 @@ export const info = [
     },
   },
   {
-    heading: 'Assistant',
-    content: "If you're new to Phisher, go to assistant and he's going to help you straight away here on this page.",
-    link: {
-      path: '/assistant',
-      linkName: 'Access assistant'
-    },
-  },
-  {
     heading: 'Settings',
     content: 'Access admin portal settings here on this page.',
     link: {

@@ -1,6 +1,19 @@
 <script setup>
 import { info } from '../components/content/info'
 
+definePageMeta({
+  middleware: 'auth'
+})
+
+const user = useSupabaseUser()
+onMounted(() => {
+  watchEffect(() => {
+    if (!user.value) {
+      navigateTo('/sign')
+    }
+  })
+})
+
 useHead({
   title: 'Phisher | Admin Portal: Home'
 })
