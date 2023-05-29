@@ -1,6 +1,10 @@
 <script setup>
 import { news } from '../components/content/news'
 
+definePageMeta({
+  middleware: 'auth'
+})
+
 useHead({
   title: "Phisher | Admin Portal: What's new"
 })
