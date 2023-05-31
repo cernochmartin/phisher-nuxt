@@ -27,7 +27,8 @@
         </div>
       </div>
       <div class="flex w-full justify-center pt-9">
-        <button type="submit" class="bg-blue-500 text-white w-20 p-1.5 rounded-sm">Submit</button>
+        <button type="submit"
+          class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white w-20 p-1.5 rounded-sm">Submit</button>
       </div>
     </div>
   </div>

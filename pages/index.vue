@@ -4,6 +4,7 @@ const password = ref('')
 const isSignUp = ref(false)
 const client = useSupabaseClient()
 const envVariables = useRuntimeConfig()
+const user = useSupabaseUser()
 
 const header = {
   headers: {
@@ -30,7 +31,6 @@ const login = async () => {
   })
 }
 
-const user = useSupabaseUser()
 onMounted(() => {
   watchEffect(() => {
     if (user.value) {
@@ -40,7 +40,7 @@ onMounted(() => {
 })
 
 useHead({
-  title: 'Phisher | Admin Portal: Sign up'
+  title: 'Phisher | Admin Portal: Sign up or Log in'
 })
 </script>
 <template>
@@ -54,7 +54,7 @@ useHead({
             class="border-blue-500 border-2 text-black rounded p-2 text-lg" />
           <input type="password" v-model="password" placeholder="Password"
             class="border-blue-500 border-2 text-black rounded p-2" />
-          <button type="submit" class="p-2 bg-blue-500 rounded text-white text-xl w-full">
+          <button type="submit" class="p-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded text-white text-xl w-full">
             <span v-if="isSignUp">Sign up</span><span v-else>Log in</span>
           </button>
           <button @click="isSignUp = !isSignUp">
