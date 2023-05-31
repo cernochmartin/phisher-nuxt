@@ -3,6 +3,13 @@ const email = ref('')
 const password = ref('')
 const isSignUp = ref(false)
 const client = useSupabaseClient()
+const envVariables = useRuntimeConfig()
+
+const header = {
+  headers: {
+    'PRIVATE-TOKEN': envVariables.SUPABASE_KEY
+  }
+}
 
 definePageMeta({
   middleware: 'auth',
