@@ -3,7 +3,7 @@ export const users = [
     firstName: 'Martin',
     surname: 'Černoch',
     email: 'cernochm@outlook.cz',
-    role: 'Chief Executive Officer'
+    role: 'Test Subject'
   },
   {
     firstName: 'Jakub',
