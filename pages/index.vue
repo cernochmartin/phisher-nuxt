@@ -2,9 +2,9 @@
 const email = ref('')
 const password = ref('')
 const isSignUp = ref(false)
-const client = useSupabaseClient()
 const envVariables = useRuntimeConfig()
 const user = useSupabaseUser()
+import { supabase } from "../components/supabase"
 
 const header = {
   headers: {
@@ -18,14 +18,14 @@ definePageMeta({
 })
 
 const signUp = async () => {
-  const { user, error } = await client.auth.signUp({
+  let { data, error } = await supabase.auth.signUp({
     email: email.value,
     password: password.value,
   })
 }
 
 const login = async () => {
-  const { user, error } = await client.auth.signIn({
+  let { data, error } = await supabase.auth.signInWithPassword({
     email: email.value,
     password: password.value,
   })
