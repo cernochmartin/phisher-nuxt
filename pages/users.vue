@@ -4,9 +4,9 @@ import { users } from '../components/content/users'
 
 const showPopup = ref(false)
 
-// definePageMeta({
-//   middleware: 'auth',
-// })
+definePageMeta({
+  middleware: 'auth',
+})
 
 useHead({
   title: 'Phisher | Admin Portal: Manage users'
@@ -19,10 +19,6 @@ useHead({
     <button @click="showPopup = true" type="submit" class="underline">
       Add user
     </button>
-    <!-- <span>></span>
-    <button @click="exportToCSV" type="submit" class="underline">
-      Export table to .csv file
-    </button> -->
   </div>
   <table class="w-full">
     <tr class="text-lg">
