@@ -1,6 +1,4 @@
 import { createClient } from "@supabase/supabase-js"
+const envVariables = useRuntimeConfig()
 
-const supabaseUrl = import.meta.env.SUPABASE_URL
-const supabaseAnonKey = import.meta.env.SUPABASE_KEY
-
-export const supabase = useSupabaseClient(supabaseUrl, supabaseAnonKey)
+export const supabase = createClient(envVariables.public.supabaseUrl, envVariables.public.supabaseKey)

@@ -2,15 +2,8 @@
 const email = ref('')
 const password = ref('')
 const isSignUp = ref(false)
-const envVariables = useRuntimeConfig()
 const user = useSupabaseUser()
 import { supabase } from "../components/supabase"
-
-const header = {
-  headers: {
-    'PRIVATE-TOKEN': envVariables.SUPABASE_KEY
-  }
-}
 
 definePageMeta({
   middleware: 'auth',
@@ -49,7 +42,7 @@ useHead({
       <div class="bg-white bg-opacity-90 rounded-lg p-8 text-blue-500 border-2 border-blue-500">
         <h2 class="text-4xl">Sign up or Log in</h2>
         <hr class="h-0.5 w-full bg-blue-500 mt-4">
-        <form class="flex flex-col gap-8 text-xl pt-8" @submit.prevent="() => (isSignUp ? signUp() : login())">
+        <form @click.prevent="() => (isSignUp ? signUp() : login())" class="flex flex-col gap-8 text-xl pt-8">
           <input type="email" v-model="email" placeholder="E-mail"
             class="border-blue-500 border-2 text-black rounded p-2 text-lg" />
           <input type="password" v-model="password" placeholder="Password"
@@ -57,7 +50,7 @@ useHead({
           <button type="submit" class="p-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded text-white text-xl w-full">
             <span v-if="isSignUp">Sign up</span><span v-else>Log in</span>
           </button>
-          <button @click="isSignUp = !isSignUp">
+          <button @click.prevent="isSignUp = !isSignUp">
             <span v-if="isSignUp">Have an account? Log in</span><span v-else>Create a new account</span>
           </button>
         </form>
