@@ -8,6 +8,13 @@ definePageMeta({
   middleware: 'auth',
 })
 
+const user = useSupabaseUser()
+onBeforeMount(() => {
+  if (!user.value) {
+    navigateTo('/')
+  }
+})
+
 useHead({
   title: 'Phisher | Admin Portal: Manage users'
 })

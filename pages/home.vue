@@ -6,12 +6,10 @@ definePageMeta({
 })
 
 const user = useSupabaseUser()
-onMounted(() => {
-  watchEffect(() => {
-    if (!user.value) {
-      navigateTo('/')
-    }
-  })
+onBeforeMount(() => {
+  if (!user.value) {
+    navigateTo('/')
+  }
 })
 
 useHead({

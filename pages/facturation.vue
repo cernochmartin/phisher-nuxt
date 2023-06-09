@@ -1,6 +1,17 @@
 <script setup>
 import { facturation } from '../components/content/facturation'
 
+definePageMeta({
+  middleware: 'auth'
+})
+
+const user = useSupabaseUser()
+onBeforeMount(() => {
+  if (!user.value) {
+    navigateTo('/')
+  }
+})
+
 useHead({
   title: 'Phisher | Admin Portal: Facturation'
 })

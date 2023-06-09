@@ -2,6 +2,17 @@
 useHead({
   title: 'Phisher | Admin Portal: Admin settings'
 })
+
+definePageMeta({
+  middleware: 'auth'
+})
+
+const user = useSupabaseUser()
+onBeforeMount(() => {
+  if (!user.value) {
+    navigateTo('/')
+  }
+})
 </script>
 <template>
   <h2 class="text-4xl pb-20">Admin settings</h2>
