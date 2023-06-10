@@ -34,8 +34,8 @@ defineProps<{
 </template>
 <style scoped>
 .card {
-  width: 480px;
-  height: 300px;
+  max-width: 480px;
+  max-height: 300px;
   padding: 8px;
   background-color: #f2f2f2;
   border-radius: 8px;
