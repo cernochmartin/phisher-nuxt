@@ -46,4 +46,8 @@ defineProps<{
   border-radius: 8px;
   margin: auto;
 }
+
+.dark-mode .delete_user {
+  background-color: #1c1917;
+}
 </style>

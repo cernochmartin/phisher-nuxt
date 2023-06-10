@@ -28,7 +28,7 @@
       </div>
       <div class="flex w-full justify-center pt-9">
         <button type="submit"
-          class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white w-20 p-1.5 rounded-sm">Submit</button>
+          class="button bg-gradient-to-r from-cyan-500 to-blue-500 text-white w-20 p-1.5 rounded-sm">Submit</button>
       </div>
     </div>
   </div>
@@ -52,6 +52,10 @@
   padding: 24px;
   border-radius: 8px;
   margin: auto;
+}
+
+.dark-mode .add_user {
+  background-color: #1c1917;
 }
 
 input {

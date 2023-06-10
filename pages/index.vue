@@ -39,7 +39,7 @@ useHead({
 <template>
   <div class="login">
     <article class="flex justify-center items-center h-full">
-      <div class="bg-white bg-opacity-90 rounded-lg p-8 text-blue-500 border-2 border-blue-500">
+      <div class="form bg-white bg-opacity-90 rounded-lg p-8 text-blue-500 border-2 border-blue-500">
         <h2 class="text-4xl">Sign up or Log in</h2>
         <hr class="h-0.5 w-full bg-blue-500 mt-4">
         <form class="flex flex-col gap-8 text-xl pt-8">
@@ -48,7 +48,7 @@ useHead({
           <input type="password" v-model="password" placeholder="Password"
             class="border-blue-500 border-2 text-black rounded p-2" />
           <button @click.prevent="() => (isSignUp ? signUp() : login())"
-            class="p-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded text-white text-xl w-full">
+            class="button p-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded text-white text-xl w-full">
             <span v-if="isSignUp">Sign up</span><span v-else>Log in</span>
           </button>
           <button @click.prevent="isSignUp = !isSignUp">
@@ -61,7 +61,22 @@ useHead({
 </template>
 <style scoped>
 .login {
-  background-image: url('../assets/background/login.png');
+  background-image: url('../assets/background/bg_dark.png');
   height: 100vh;
+}
+
+.dark-mode .form {
+  background-color: #1c1917;
+  color: #22c55e;
+  border-color: #22c55e;
+}
+
+.dark-mode input {
+  border-color: #22c55e;
+  color: #fff;
+}
+
+.dark-mode hr {
+  background-color: #22c55e;
 }
 </style>

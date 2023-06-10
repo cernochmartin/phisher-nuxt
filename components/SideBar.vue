@@ -30,6 +30,10 @@
   background-color: #f2f2f2;
 }
 
+.dark-mode .sidebar {
+  background-color: #1c1917;
+}
+
 .router-link-exact-active {
   font-weight: 600;
 }

@@ -8,7 +8,7 @@ export const info = [
     },
   },
   {
-    heading: 'Manage Users',
+    heading: 'Manage users',
     content: 'Manage, add or delete users here on this page.',
     link: {
       path: '/users',

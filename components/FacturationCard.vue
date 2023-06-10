@@ -23,4 +23,8 @@ defineProps<{
   padding: 24px;
   border-radius: 8px;
 }
+
+.dark-mode .facturation_card {
+  background-color: #1c1917;
+}
 </style>

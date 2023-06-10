@@ -19,7 +19,7 @@
       </div>
       <div class="flex w-full justify-center pt-7">
         <button type="submit"
-          class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white w-20 p-1.5 rounded-sm">Submit</button>
+          class="button bg-gradient-to-r from-cyan-500 to-blue-500 text-white w-20 p-1.5 rounded-sm">Submit</button>
       </div>
     </div>
   </div>
@@ -45,6 +45,10 @@
   margin: auto;
 }
 
+.dark-mode .message {
+  background-color: #1c1917;
+}
+
 .textarea {
   height: 380px;
   padding: 8px;
@@ -55,5 +59,9 @@ textarea {
   border: 1px solid black;
   border-radius: 4px;
   padding: 4px;
+}
+
+.dark-mode textarea {
+  background-color: #292524;
 }
 </style>

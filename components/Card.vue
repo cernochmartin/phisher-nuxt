@@ -24,7 +24,7 @@ defineProps<{
       </div>
       <div class="flex h-40 items-end">
         <NuxtLink :to="link?.path"
-          class="bg-gradient-to-r from-cyan-500 to-blue-500 w-32 h-10 text-white text-xs font-semibold flex items-center justify-center cursor-pointer rounded-sm">
+          class="button bg-gradient-to-r from-cyan-500 to-blue-500 w-32 h-10 text-white text-xs font-semibold flex items-center justify-center cursor-pointer rounded-sm">
           {{
             link?.linkName }}
         </NuxtLink>
@@ -40,5 +40,9 @@ defineProps<{
   background-color: #f2f2f2;
   border-radius: 8px;
   opacity: 97%;
+}
+
+.dark-mode .card {
+  background-color: #1c1917;
 }
 </style>

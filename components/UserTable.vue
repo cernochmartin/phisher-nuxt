@@ -15,9 +15,6 @@ defineProps<{
     <td>
       <div class="flex gap-6">
         <NuxtLink :to="`mailto:${email}`" target="_blank">{{ email }}</NuxtLink>
-        <button type="submit">
-          <i class="fa-solid fa-copy text-blue-500 pt-0.5" />
-        </button>
       </div>
     </td>
     <td>{{ role }}</td>
@@ -43,6 +40,18 @@ tr:nth-child(4n + 2) {
 
 tr:nth-child(4n + 4) {
   background-color: #e2e2e2;
+}
+
+.dark-mode tr:nth-child(4n + 1) {
+  background-color: #0c0a09;
+}
+
+.dark-mode tr:nth-child(4n + 2) {
+  background-color: #1c1917;
+}
+
+.dark-mode tr:nth-child(4n + 4) {
+  background-color: #0c0a09;
 }
 
 table,

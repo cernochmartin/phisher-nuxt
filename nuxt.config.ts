@@ -6,7 +6,7 @@ export default defineNuxtConfig({
       supabaseUrl: process.env.SUPABASE_URL
     }
   },
-  modules: ['@nuxtjs/supabase', '@nuxtjs/tailwindcss', '@nuxtjs/google-fonts'],
+  modules: ['@nuxtjs/supabase', '@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', '@nuxtjs/color-mode'],
   googleFonts: {
     families: {
       Montserrat: [400]
