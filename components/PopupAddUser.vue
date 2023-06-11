@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { supabase } from "../components/supabase"
 
+const props = defineProps<{
+  lastId?: number
+}>()
+
 const name = ref('')
 const surname = ref('')
 const email = ref('')
@@ -15,7 +19,7 @@ const insertData = async () => {
         surname: surname.value,
         email: email.value,
         role: role.value,
-        id: 14
+        id: props.lastId! + 1
       }
     ])
 }

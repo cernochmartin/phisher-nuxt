@@ -40,5 +40,5 @@ useHead({
     <UserTable v-for="item in data" :key="item.email" v-bind="item" />
   </table>
   <AddUserButton @click="showPopup = true" />
-  <PopupAddUser v-show="showPopup" @close-popup-add="showPopup = false" />
+  <PopupAddUser v-show="showPopup" @close-popup-add="showPopup = false" :last-id="data![data?.length! - 1].id" />
 </template>
