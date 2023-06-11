@@ -1,6 +1,5 @@
 <script setup lang="ts">
-
-import { users } from '../components/content/users'
+import { supabase } from "../components/supabase"
 
 const showPopup = ref(false)
 
@@ -14,6 +13,10 @@ onBeforeMount(() => {
     navigateTo('/')
   }
 })
+
+const { data, error } = await supabase
+  .from('users_database')
+  .select('*')
 
 useHead({
   title: 'Phisher | Admin Portal: Manage users'
@@ -34,7 +37,7 @@ useHead({
       <th>Role</th>
       <th>Delete user</th>
     </tr>
-    <UserTable v-for="item in users" :key="item.email" v-bind="item" />
+    <UserTable v-for="item in data" :key="item.email" v-bind="item" />
   </table>
   <AddUserButton @click="showPopup = true" />
   <PopupAddUser v-show="showPopup" @close-popup-add="showPopup = false" />
