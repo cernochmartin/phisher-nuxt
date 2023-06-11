@@ -1,3 +1,25 @@
+<script setup lang="ts">
+import { supabase } from "../components/supabase"
+
+const name = ref('')
+const surname = ref('')
+const email = ref('')
+const role = ref('')
+
+const insertData = async () => {
+  const { data, error } = await supabase
+    .from('users_database')
+    .insert([
+      {
+        name: name.value,
+        surname: surname.value,
+        email: email.value,
+        role: role.value,
+        id: 14
+      }
+    ])
+}
+</script>
 <template>
   <div class="background_overlay">
     <div class="add_user">
@@ -7,27 +29,27 @@
       <h3 class="text-3xl text-center pb-2">Add user</h3>
       <hr class="bg-gray-500 h-0.5 mb-8">
       <div class="w-80">
-        <div class="grid grid-cols-2 gap-4">
+        <form class="grid grid-cols-2 gap-4">
           <span>First name:</span>
           <label for="text">
-            <input type="text" placeholder="First name">
+            <input type="text" v-model="name" placeholder="First name">
           </label>
           <span>Surname:</span>
           <label for="text">
-            <input type="text" placeholder="Surname">
+            <input type="text" v-model="surname" placeholder="Surname">
           </label>
           <span>E-mail:</span>
           <label for="email">
-            <input type="email" placeholder="E-mail">
+            <input type="email" v-model="email" placeholder="E-mail">
           </label>
           <span>Role:</span>
           <label for="text">
-            <input type="text" placeholder="Role">
+            <input type="text" v-model="role" placeholder="Role">
           </label>
-        </div>
+        </form>
       </div>
       <div class="flex w-full justify-center pt-9">
-        <button type="submit"
+        <button @click="insertData()" type="submit"
           class="button bg-gradient-to-r from-cyan-500 to-blue-500 text-white w-20 p-1.5 rounded-sm">Submit</button>
       </div>
     </div>

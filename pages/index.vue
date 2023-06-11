@@ -23,6 +23,7 @@ const signIn = async () => {
     email: email.value,
     password: password.value,
   })
+  // .then(() => { navigateTo('/home') })
   navigateTo('/home')
 }
 
@@ -67,6 +68,11 @@ useHead({
 .dark-mode input {
   border-color: #22c55e;
   color: #fff;
+  background-color: #292524;
+}
+
+.dark-mode .button {
+  background-image: linear-gradient(to right, #22c55e, #059669);
 }
 
 .dark-mode hr {

@@ -3,7 +3,7 @@
 const showPopupActionSuccess = ref(false)
 
 defineProps<{
-  firstName?: string
+  name?: string
   surname?: string
   email?: string
   role?: string
@@ -11,7 +11,7 @@ defineProps<{
 </script>
 <template>
   <tr>
-    <td>{{ firstName }} {{ surname }}</td>
+    <td>{{ name }} {{ surname }}</td>
     <td>
       <div class="flex gap-6">
         <NuxtLink :to="`mailto:${email}`" target="_blank">{{ email }}</NuxtLink>
