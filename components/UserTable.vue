@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-const showPopupDelete = ref(false)
+const showPopupActionSuccess = ref(false)
 
 defineProps<{
   firstName?: string
@@ -19,7 +19,7 @@ defineProps<{
     </td>
     <td>{{ role }}</td>
     <td>
-      <button @click="showPopupDelete = true" type="submit" class="flex gap-2">
+      <button @click="showPopupActionSuccess = true" type="submit" class="flex gap-2">
         <span>Delete</span>
         <div class="w-6 h-6 bg-red-500 rounded-full">
           <i class="fa-solid fa-user-minus fa-xs" style="color: #ffffff;" />
@@ -27,7 +27,7 @@ defineProps<{
       </button>
     </td>
   </tr>
-  <PopupDeleteUser v-show="showPopupDelete" @close-popup-delete="showPopupDelete = false" />
+  <PopupActionSuccess v-show="showPopupActionSuccess" @close-popup-success="showPopupActionSuccess = false" />
 </template>
 <style>
 tr:nth-child(4n + 1) {

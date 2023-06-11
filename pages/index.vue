@@ -11,15 +11,15 @@ definePageMeta({
 })
 
 const signUp = async () => {
-  let { data, error } = await supabase.auth.signUp({
+  const { data, error } = await supabase.auth.signUp({
     email: email.value,
     password: password.value,
   })
-  // navigateTo('/home')
+  navigateTo('/home')
 }
 
 const signIn = async () => {
-  let { data, error } = await supabase.auth.signInWithPassword({
+  const { data, error } = await supabase.auth.signInWithPassword({
     email: email.value,
     password: password.value,
   })

@@ -2,7 +2,7 @@
 import { supabase } from "../components/supabase"
 
 const signOut = async () => {
-  let { error } = await supabase.auth.signOut()
+  const { error } = await supabase.auth.signOut()
   navigateTo('/')
 }
 </script>
