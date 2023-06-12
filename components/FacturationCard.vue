@@ -3,6 +3,11 @@
 defineProps<{
   heading?: string
   content?: string
+  switchType: {
+    optionOne?: string
+    optionTwo?: string
+    optionThree?: string
+  }
 }>()
 
 </script>
@@ -12,6 +17,11 @@ defineProps<{
     <hr class="bg-gray-600 w-full h-0.5 my-3.5">
     <div class="p-4 text-lg">
       <p>{{ content }}</p>
+    </div>
+    <div class="flex flex-col gap-5 items-start p-4 pt-10 text-xl font-semibold">
+      <button>{{ switchType?.optionOne }}</button><button>{{ switchType?.optionTwo }}</button><button>{{
+        switchType?.optionThree
+      }}</button>
     </div>
   </div>
 </template>

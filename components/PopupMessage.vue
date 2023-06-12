@@ -1,3 +1,27 @@
+<script setup lang="ts">
+import { supabase } from "../components/supabase"
+
+const text = ref('')
+const name = ref('')
+const email = ref('')
+
+// const props = defineProps<{
+//   lastId?: number
+// }>()
+
+const insertFeedback = async () => {
+  const { data, error } = await supabase
+    .from('feedback_database')
+    .insert([
+      {
+        name: name.value,
+        email: email.value,
+        text: text.value,
+        id: 2
+      }
+    ])
+}
+</script>
 <template>
   <div class="background_overlay">
     <div class="message">
@@ -6,19 +30,19 @@
       </div>
       <h3 class="text-3xl text-center pb-2">Give us feedback</h3>
       <hr class="bg-gray-500 h-0.5 mb-8">
-      <textarea placeholder="Write your feedback" class="w-full textarea"></textarea>
+      <textarea v-model="text" placeholder="Write your feedback" class="w-full textarea"></textarea>
       <div class="flex justify-center gap-14">
         <div class="flex flex-col gap-2 pt-4 w-full">
           <span>From:</span>
-          <input type="text" class="w-full" placeholder="From">
+          <input type="text" v-model="name" class="w-full" placeholder="From">
         </div>
         <div class="flex flex-col gap-2 pt-4 w-full">
           <span>E-mail:</span>
-          <input type="text" class="w-full" placeholder="E-mail">
+          <input type="text" v-model="email" class="w-full" placeholder="E-mail">
         </div>
       </div>
       <div class="flex w-full justify-center pt-7">
-        <button type="submit"
+        <button type="submit" @click="insertFeedback()"
           class="button bg-gradient-to-r from-cyan-500 to-blue-500 text-white w-20 p-1.5 rounded-sm">Submit</button>
       </div>
     </div>
