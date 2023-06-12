@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { supabase } from "../components/supabase"
 
-const text = ref('')
-const name = ref('')
-const email = ref('')
+const feedback = reactive({
+  text: '',
+  name: '',
+  email: '',
+})
 
 // const props = defineProps<{
 //   lastId?: number
@@ -14,10 +16,10 @@ const insertFeedback = async () => {
     .from('feedback_database')
     .insert([
       {
-        name: name.value,
-        email: email.value,
-        text: text.value,
-        id: 2
+        name: feedback.name,
+        email: feedback.email,
+        text: feedback.text,
+        id: 4
       }
     ])
 }
@@ -30,15 +32,15 @@ const insertFeedback = async () => {
       </div>
       <h3 class="text-3xl text-center pb-2">Give us feedback</h3>
       <hr class="bg-gray-500 h-0.5 mb-8">
-      <textarea v-model="text" placeholder="Write your feedback" class="w-full textarea"></textarea>
+      <textarea v-model="feedback.text" placeholder="Write your feedback" class="w-full textarea"></textarea>
       <div class="flex justify-center gap-14">
         <div class="flex flex-col gap-2 pt-4 w-full">
           <span>From:</span>
-          <input type="text" v-model="name" class="w-full" placeholder="From">
+          <input type="text" v-model="feedback.name" class="w-full" placeholder="From">
         </div>
         <div class="flex flex-col gap-2 pt-4 w-full">
           <span>E-mail:</span>
-          <input type="text" v-model="email" class="w-full" placeholder="E-mail">
+          <input type="text" v-model="feedback.email" class="w-full" placeholder="E-mail">
         </div>
       </div>
       <div class="flex w-full justify-center pt-7">

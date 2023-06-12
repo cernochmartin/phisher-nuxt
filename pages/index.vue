@@ -27,11 +27,11 @@ const signIn = async () => {
   navigateTo('/home')
 }
 
-onBeforeMount(() => {
-  if (user.value) {
-    navigateTo('/home')
-  }
-})
+// onBeforeMount(() => {
+//   if (user.value) {
+//     navigateTo('/home')
+//   }
+// })
 
 useHead({
   title: 'Phisher | Admin Portal: Sign up or Log in'

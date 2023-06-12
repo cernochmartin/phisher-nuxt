@@ -5,20 +5,22 @@ const props = defineProps<{
   lastId?: number
 }>()
 
-const name = ref('')
-const surname = ref('')
-const email = ref('')
-const role = ref('')
+const insertUsers = reactive({
+  name: '',
+  surname: '',
+  email: '',
+  role: '',
+})
 
 const insertData = async () => {
   const { data, error } = await supabase
     .from('users_database')
     .insert([
       {
-        name: name.value,
-        surname: surname.value,
-        email: email.value,
-        role: role.value,
+        name: insertUsers.name,
+        surname: insertUsers.surname,
+        email: insertUsers.email,
+        role: insertUsers.role,
         id: props.lastId! + 1
       }
     ])
@@ -36,19 +38,19 @@ const insertData = async () => {
         <form class="grid grid-cols-2 gap-4">
           <span>First name:</span>
           <label for="text">
-            <input type="text" v-model="name" placeholder="First name">
+            <input type="text" v-model="insertUsers.name" placeholder="First name">
           </label>
           <span>Surname:</span>
           <label for="text">
-            <input type="text" v-model="surname" placeholder="Surname">
+            <input type="text" v-model="insertUsers.surname" placeholder="Surname">
           </label>
           <span>E-mail:</span>
           <label for="email">
-            <input type="email" v-model="email" placeholder="E-mail">
+            <input type="email" v-model="insertUsers.email" placeholder="E-mail">
           </label>
           <span>Role:</span>
           <label for="text">
-            <input type="text" v-model="role" placeholder="Role">
+            <input type="text" v-model="insertUsers.role" placeholder="Role">
           </label>
         </form>
       </div>
