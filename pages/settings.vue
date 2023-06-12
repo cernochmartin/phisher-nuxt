@@ -1,8 +1,4 @@
-<script setup>
-useHead({
-  title: 'Phisher | Admin Portal: Admin settings'
-})
-
+<script setup lang="ts">
 definePageMeta({
   middleware: 'auth'
 })
@@ -12,6 +8,10 @@ onBeforeMount(() => {
   if (!user.value) {
     navigateTo('/')
   }
+})
+
+useHead({
+  title: 'Phisher | Admin Portal: Admin settings'
 })
 </script>
 <template>

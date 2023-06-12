@@ -17,7 +17,7 @@ export const info = [
   },
   {
     heading: 'Facturation',
-    content: 'Change your subscription plan here on this page.',
+    content: 'Change your subscription or billing plan here on this page.',
     link: {
       path: '/facturation',
       linkName: 'Subscription options'
@@ -25,7 +25,7 @@ export const info = [
   },
   {
     heading: 'Settings',
-    content: 'Access admin portal settings here on this page.',
+    content: 'Access administration portal settings here on this page.',
     link: {
       path: '/settings',
       linkName: 'Go to settings'

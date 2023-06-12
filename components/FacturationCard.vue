@@ -19,9 +19,9 @@ defineProps<{
       <p>{{ content }}</p>
     </div>
     <div class="flex flex-col gap-5 items-start p-4 pt-10 text-xl font-semibold">
-      <button>{{ switchType?.optionOne }}</button><button>{{ switchType?.optionTwo }}</button><button>{{
-        switchType?.optionThree
-      }}</button>
+      <button>{{ switchType?.optionOne }}</button>
+      <button>{{ switchType?.optionTwo }}</button>
+      <button>{{ switchType?.optionThree }}</button>
     </div>
   </div>
 </template>
