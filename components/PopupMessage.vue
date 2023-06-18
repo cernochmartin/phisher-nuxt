@@ -7,9 +7,7 @@ const feedback = reactive({
   email: '',
 })
 
-// const props = defineProps<{
-//   lastId?: number
-// }>()
+const emit = defineEmits()
 
 const insertFeedback = async () => {
   const { data, error } = await supabase
@@ -19,9 +17,10 @@ const insertFeedback = async () => {
         name: feedback.name,
         email: feedback.email,
         text: feedback.text,
-        id: 4
+        id: 2
       }
     ])
+  emit('close-popup-message')
 }
 </script>
 <template>

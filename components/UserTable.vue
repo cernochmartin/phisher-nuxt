@@ -1,13 +1,23 @@
 <script setup lang="ts">
-
+import { supabase } from "../components/supabase"
 const showPopupActionSuccess = ref(false)
 
-defineProps<{
+const props = defineProps<{
+  index: number
+  supabaseData: any
   name?: string
   surname?: string
   email?: string
   role?: string
 }>()
+
+const jdidoprdele = async () => {
+  const { error } = await supabase
+    .from('users_database')
+    .delete()
+    .eq('id', props.supabaseData[props.index].id)
+}
+
 </script>
 <template>
   <tr>
@@ -19,7 +29,7 @@ defineProps<{
     </td>
     <td>{{ role }}</td>
     <td>
-      <button @click="showPopupActionSuccess = true" type="submit" class="flex gap-2">
+      <button @click="jdidoprdele()" type="submit" class="flex gap-2">
         <span>Delete</span>
         <div class="w-6 h-6 bg-red-500 rounded-full">
           <i class="fa-solid fa-user-minus fa-xs" style="color: #ffffff;" />

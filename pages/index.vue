@@ -15,7 +15,6 @@ const signUp = async () => {
     email: email.value,
     password: password.value,
   })
-  navigateTo('/home')
 }
 
 const signIn = async () => {
@@ -23,17 +22,8 @@ const signIn = async () => {
     email: email.value,
     password: password.value,
   })
-  // .then(() => { navigateTo('/home') })
-  navigateTo('/home')
+  setTimeout(() => navigateTo('/home'), 500)
 }
-
-// onBeforeMount(() => {
-//   if (user.value) {
-//     navigateTo('/home')
-//   }
-// })
-
-console.log(supabase)
 
 useHead({
   title: 'Phisher | Admin Portal: Sign up or Log in'

@@ -12,6 +12,8 @@ const insertUsers = reactive({
   role: '',
 })
 
+const emit = defineEmits()
+
 const insertData = async () => {
   const { data, error } = await supabase
     .from('users_database')
@@ -24,6 +26,7 @@ const insertData = async () => {
         id: props.lastId! + 1
       }
     ])
+  emit('close-popup-add')
 }
 </script>
 <template>
