@@ -20,6 +20,10 @@
         <NuxtLink to="/facturation">Facturation</NuxtLink>
       </li>
       <li class="flex gap-3">
+        <i class="fa-solid fa-fish pt-0.5 w-6 text-center" />
+        <NuxtLink to="/phish">Phish testing</NuxtLink>
+      </li>
+      <li class="flex gap-3">
         <i class="fa-solid fa-gears pt-0.5 w-6 text-center" />
         <NuxtLink to="/settings">Settings</NuxtLink>
       </li>
