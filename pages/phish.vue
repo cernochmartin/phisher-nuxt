@@ -5,7 +5,7 @@ const https = reactive({
 </script>
 <template>
   <h2 class="text-4xl pb-20">Phish testing</h2>
-  <h3 class="text-2xl pb-5">Input values</h3>
+  <h3 class="text-2xl pb-5">Input values manually</h3>
   <article class="phish">
     <div class="flex gap-6 justify-center pt-7">
       <div class="flex flex-col gap-6">
