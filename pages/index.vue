@@ -33,6 +33,8 @@ const signIn = async () => {
 //   }
 // })
 
+console.log(supabase)
+
 useHead({
   title: 'Phisher | Admin Portal: Sign up or Log in'
 })
