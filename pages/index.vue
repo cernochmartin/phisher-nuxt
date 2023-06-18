@@ -2,7 +2,7 @@
 const email = ref('')
 const password = ref('')
 const isSignUp = ref(false)
-const user = useSupabaseUser()
+const showPopupEmail = ref(false)
 import { supabase } from "../components/supabase"
 
 definePageMeta({
@@ -15,6 +15,7 @@ const signUp = async () => {
     email: email.value,
     password: password.value,
   })
+  showPopupEmail.value = true
 }
 
 const signIn = async () => {
@@ -44,11 +45,12 @@ useHead({
           <span v-if="isSignUp">Sign up</span><span v-else>Log in</span>
         </button>
         <button @click.prevent="isSignUp = !isSignUp" class="text-lg md:text-2xl xl:text-xl">
-          <span v-if="isSignUp">Have an account? Log in</span><span v-else>Create a new account</span>
+          <span v-if="isSignUp">Have an account? Log in</span><span v-else>Create new account</span>
         </button>
       </form>
     </div>
   </article>
+  <PopupEmail v-show="showPopupEmail" @close-popup-email="showPopupEmail = false" />
 </template>
 <style scoped>
 .dark-mode .form {

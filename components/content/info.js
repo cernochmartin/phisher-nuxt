@@ -23,14 +23,14 @@ export const info = [
       linkName: 'Subscription options'
     },
   },
-  {
-    heading: 'Phish testing',
-    content: 'Test if your site or e-mail is phishing manually here on this page.',
-    link: {
-      path: '/phish',
-      linkName: 'Test phishing'
-    },
-  },
+  // {
+  //   heading: 'Phish testing',
+  //   content: 'Test if your site or e-mail is phishing manually here on this page.',
+  //   link: {
+  //     path: '/phish',
+  //     linkName: 'Test phishing'
+  //   },
+  // },
   {
     heading: 'Settings',
     content: 'Access administration portal settings here on this page.',

@@ -24,7 +24,6 @@ defineProps<{
       </div>
     </div>
   </div>
-  <!-- <PopupActionSuccess v-show="showPopupSuccess" @close-popup-success="showPopupSuccess = false" /> -->
 </template>
 <style scoped>
 .background_overlay {

@@ -1,12 +1,12 @@
 <template>
   <div class="background_overlay">
-    <div class="action_success">
+    <div class="email">
       <div class="text-2xl w-full flex justify-end">
-        <button @click="$emit('close-popup-success')">&#10006;</button>
+        <button @click="$emit('close-popup-email')">&#10006;</button>
       </div>
       <div class="flex flex-col items-center h-full gap-6 text-green-500 pt-2">
         <i class="fa-solid fa-circle-check text-8xl" />
-        <span class="text-lg">Action done succesfully!</span>
+        <span class="text-lg">An e-mail was sent to you!</span>
       </div>
     </div>
   </div>
@@ -23,7 +23,7 @@
   background-color: #000000da;
 }
 
-.action_success {
+.email {
   width: 440px;
   height: 240px;
   background-color: #ffffff;
